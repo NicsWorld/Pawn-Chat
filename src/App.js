@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
-import './App.css';
+import './App.scss';
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/analytics';
-
+import SignInWithGoogle from './components/SignIn';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
@@ -53,8 +53,7 @@ function SignIn() {
 
   return (
     <>
-      <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-      <p>I may ban you for any reason whatsoever</p>
+      <SignInWithGoogle />
     </>
   )
 
@@ -104,7 +103,7 @@ function ChatRoom() {
 
     <form onSubmit={sendMessage}>
 
-      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Say hi" />
 
       <button type="submit" disabled={!formValue}>➡️</button>
 

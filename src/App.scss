@@ -1,18 +1,17 @@
 body {
-  background-color: #282c34;
+  background-color: #ca43ff;
 }
 
 .App {
-  text-align: center;
   max-width: 728px;
   margin: 0 auto;
 }
 
 .App header {
-  background-color: #181717;
+  background-color: #78ff43;
   height: 10vh;
   min-height: 50px;
-  color: white;
+  color: black;
   position: fixed;
   width: 100%;
   max-width: 728px;
@@ -67,9 +66,8 @@ form {
 
 form button {
   width: 20%;
-  background-color: rgb(56, 56, 143);
+  background-color: #9400cb;
 }
-
 
 input {
   line-height: 1.5;
@@ -107,9 +105,6 @@ button:disabled {
   margin: 0 auto;
 }
 
-
-
-
 ul, li {
   text-align: left;
   list-style: none;
@@ -121,7 +116,7 @@ p {
   padding: 10px 20px;
   border-radius: 25px;
   position: relative;
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -151,3 +146,49 @@ img {
   border-radius: 50%;
   margin: 2px 5px;
 }
+
+$white: #fff;
+$google-blue: #4285f4;
+$button-active-blue: #1669F2;
+
+.google-btn {
+  width: 184px;
+  margin: auto;
+  height: 42px;
+  background-color: $google-blue;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+  .google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: $white;
+  }
+  .google-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+  .btn-text {
+    float: right;
+    margin: 0px -10px 0 0;
+    color: $white;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    font-family: "Roboto";
+  }
+  &:hover {
+    box-shadow: 0 0 6px $google-blue;
+    cursor: pointer;
+  }
+  &:active {
+    background: $button-active-blue;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
